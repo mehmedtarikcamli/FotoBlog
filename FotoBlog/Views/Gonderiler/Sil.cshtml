@@ -1,0 +1,24 @@
+﻿@model Gonderi
+
+@{
+    ViewData["Title"] = "Sil Gönderi";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="SilOnaylandi" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="Baslik" class="control-label"></label>
+        <input asp-for="Baslik" class="form-control" disabled />
+    </div>
+
+    <div class="form-group">
+        <p>Gerçekten silmek istiyor musunuz?</p>
+    </div>
+
+    <button type="submit" class="btn btn-danger">Sil</button>
+    <a asp-action="Index" class="btn btn-secondary">İptal</a>
+</form>

@@ -19,6 +19,10 @@
 		<div class="mb-4">
 			<h4>@a.Baslik</h4>
 			<img class="w-100" src="~/img/upload/@a.ResimYolu" />
+			<div class="mt-2">
+				<a asp-action="Duzenle" asp-controller="Gonderiler" asp-route-id="@a.Id" class="btn btn-primary">Düzenle</a>
+				<a asp-action="Sil" asp-controller="Gonderiler" asp-route-id="@a.Id" class="btn btn-danger">Sil</a>
+			</div>
 		</div>
 	}
 </div>
